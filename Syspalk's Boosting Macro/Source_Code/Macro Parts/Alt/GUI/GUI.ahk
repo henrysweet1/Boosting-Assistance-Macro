@@ -24,3 +24,30 @@ Gui,Add,Button,x205 y115,Command mats
 Gui,Font, s11
 Gui,Add,Text,y370 x15 cwhite,START: F1            STOP: F2            PAUSE: F3
 Gui,Show, w350 h400,Syspalk's Boost macro %version%
+
+loadcommandmats()
+{
+	Gui, command:color,0x2A2F32
+	Gui, command:Font,s10 Bold
+
+	Gui, command:add,groupbox, x20 y20 w130 h90 cwhite, Hotkeys
+	Gui, command:add,Text,x30 y40 cred,Gumdrops
+	Gui, command:add,Edit,limit1 xp+90 yp-3 w20 h20 ,%gumdropkey%
+	Gui, command:add,Text,x30 yp+25 cred,Jelly Beans
+	Gui, command:add,Edit,limit1 xp+90 yp-3 w20 h20 ,%jbkey%
+	Gui, command:add,Text,x30 yp+25 cred,Cloud vial
+	Gui, command:add,Edit,limit1 xp+90 yp-3 w20 h20 ,%cloudkey%
+
+	Gui, command:add,groupbox, x20 yp+40 w340 h175 cwhite,Options
+	Gui, command:add,Checkbox, x30 yp+25 cwhite,Use gumdrops upon receiving command.
+	Gui, command:add,Text, x30 yp+25 cwhite,Use gumdrops for
+	Gui, command:add,Edit, xp+130 yp w50 h20,%gumdroptime%
+	Gui, command:add,Text, xp+55 yp cwhite,Seconds
+	Gui, command:add,Checkbox, x30 yp+35 cwhite,Use Jelly beans upon receiving command.
+	Gui, command:add,Checkbox, x30 yp+35 cwhite,Use a cloud upon receiving command.
+	Gui, command:add,Text, x30 yp+25 cwhite,Use a cloud every
+	Gui, command:add,Edit, xp+130 yp w50 h20,%cloudtime%
+	Gui, command:add,Text, xp+55 yp cwhite,commands.
+
+	Gui, command:show,,Command mats
+}
