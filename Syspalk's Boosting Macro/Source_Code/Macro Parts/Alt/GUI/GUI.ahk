@@ -9,5 +9,7 @@ Gui,Add,DropDownList, x20 y80 w90 h200,%farmpattern%||None|zigzag|squares|zigzag
 Gui,Add,Text, xp+15 yp-20 cwhite,Pattern                               Size
 Gui,Add,Slider, Left ToolTip xp+115 yp+15 range0-100,%patternsize%
 Gui,Add,Text, xp+160 yp+10 w10 h17 c%infocol%,?
+Gui,Add,Radio,yp+35 x20 cwhite,Align to sprinkler
+Gui,Add,Radio,yp+20 x20 cwhite,Align to planter
     
 Gui,Show, w350 h400,Syspalk's Boost macro %version%
