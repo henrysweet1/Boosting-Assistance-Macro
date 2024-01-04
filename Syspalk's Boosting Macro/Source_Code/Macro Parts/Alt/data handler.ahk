@@ -1,6 +1,6 @@
 ﻿global farmpattern
 global patternsize
-global sprinkalign
+global sprinkleralign
 global plantalign
 global usemicros
 global toggle1, toggle2, toggle3
@@ -16,7 +16,7 @@ global commandjb
 global commandcloud
 global cloudtime
 
-global filepath := "Source_Code\Macro_Parts\Alt\data\data.ini"
+global filepath := "Source_Code\Macro Parts\Alt\data\data.ini"
 
 ReadData()
 {
@@ -115,12 +115,12 @@ SaveData()
     IniWrite,%key2%,%filepath%,regular,key2
     IniWrite,%key3%,%filepath%,regular,key3
 
-    IniWrite,%gumdropkey%,%filepath%,regular,gumdropkey
-    IniWrite,%jbkey%,%filepath%,regular,jbkey
-    IniWrite,%cloudkey%,%filepath%,regular,cloudkey
-    IniWrite,%commandgumdrop%,%filepath%,regular,commandgumdrop
-    IniWrite,%gumdroptime%,%filepath%,regular,gumdroptime
-    IniWrite,%commandjb%,%filepath%,regular,commandjb
-    IniWrite,%commandcloud%,%filepath%,regular,commandcloud
-    IniWrite,%cloudtime%,%filepath%,regular,cloudtime
+    IniWrite,%gumdropkey%,%filepath%,command,gumdropkey
+    IniWrite,%jbkey%,%filepath%,command,jbkey
+    IniWrite,%cloudkey%,%filepath%,command,cloudkey
+    IniWrite,%commandgumdrop%,%filepath%,command,commandgumdrop
+    IniWrite,%gumdroptime%,%filepath%,command,gumdroptime
+    IniWrite,%commandjb%,%filepath%,command,commandjb
+    IniWrite,%commandcloud%,%filepath%,command,commandcloud
+    IniWrite,%cloudtime%,%filepath%,command,cloudtime
 }
