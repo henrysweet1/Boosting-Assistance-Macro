@@ -17,6 +17,7 @@ global commandcloud
 global cloudtime
 
 global filepath := "Source_Code\Macro Parts\Alt\data\data.ini"
+global loadedcommandgui := false
 
 ReadData()
 {
@@ -35,14 +36,14 @@ ReadData()
     IniRead,key2,%filepath%,regular,key2
     IniRead,key3,%filepath%,regular,key3
 
-    IniRead,gumdropkey,%filepath%,regular,gumdropkey
-    IniRead,jbkey,%filepath%,regular,jbkey
-    IniRead,cloudkey,%filepath%,regular,cloudkey
-    IniRead,commandgumdrop,%filepath%,regular,commandgumdrop
-    IniRead,gumdroptime,%filepath%,regular,gumdroptime
-    IniRead,commandjb,%filepath%,regular,commandjb
-    IniRead,commandcloud,%filepath%,regular,commandcloud
-    IniRead,cloudtime,%filepath%,regular,cloudtime
+    IniRead,gumdropkey,%filepath%,command,gumdropkey
+    IniRead,jbkey,%filepath%,command,jbkey
+    IniRead,cloudkey,%filepath%,command,cloudkey
+    IniRead,commandgumdrop,%filepath%,command,commandgumdrop
+    IniRead,gumdroptime,%filepath%,command,gumdroptime
+    IniRead,commandjb,%filepath%,command,commandjb
+    IniRead,commandcloud,%filepath%,command,commandcloud
+    IniRead,cloudtime,%filepath%,command,cloudtime
 
     if (sprinkleralign){
         sprinkleralign := "Checked"
@@ -85,7 +86,10 @@ ReadGui()
     GuiControlGet,key1,,key1
     GuiControlGet,key2,,key2
     GuiControlGet,key3,,key3
+}
 
+ReadCommandGui()
+{
     GuiControlGet,gumdropkey,,gumdropkey
     GuiControlGet,jbkey,,jbkey
     GuiControlGet,cloudkey,,cloudkey
@@ -115,12 +119,15 @@ SaveData()
     IniWrite,%key2%,%filepath%,regular,key2
     IniWrite,%key3%,%filepath%,regular,key3
 
-    IniWrite,%gumdropkey%,%filepath%,command,gumdropkey
-    IniWrite,%jbkey%,%filepath%,command,jbkey
-    IniWrite,%cloudkey%,%filepath%,command,cloudkey
-    IniWrite,%commandgumdrop%,%filepath%,command,commandgumdrop
-    IniWrite,%gumdroptime%,%filepath%,command,gumdroptime
-    IniWrite,%commandjb%,%filepath%,command,commandjb
-    IniWrite,%commandcloud%,%filepath%,command,commandcloud
-    IniWrite,%cloudtime%,%filepath%,command,cloudtime
+    if (loadedcommandgui)
+    {
+        IniWrite,%gumdropkey%,%filepath%,command,gumdropkey
+        IniWrite,%jbkey%,%filepath%,command,jbkey
+        IniWrite,%cloudkey%,%filepath%,command,cloudkey
+        IniWrite,%commandgumdrop%,%filepath%,command,commandgumdrop
+        IniWrite,%gumdroptime%,%filepath%,command,gumdroptime
+        IniWrite,%commandjb%,%filepath%,command,commandjb
+        IniWrite,%commandcloud%,%filepath%,command,commandcloud
+        IniWrite,%cloudtime%,%filepath%,command,cloudtime
+    }
 }
