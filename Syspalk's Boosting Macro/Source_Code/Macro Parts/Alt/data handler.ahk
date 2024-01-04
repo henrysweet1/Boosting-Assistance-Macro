@@ -16,11 +16,10 @@ global commandjb
 global commandcloud
 global cloudtime
 
+global filepath := "Source_Code\Macro_Parts\Alt\data\data.ini"
 
 ReadData()
 {
-    filepath := "Source_Code\Macro_Parts\Alt\data\data.ini"
-
     IniRead,farmpattern,%filepath%,regular,farmpattern
     IniRead,patternsize,%filepath%,regular,patternsize
     IniRead,sprinkleralign,%filepath%,regular,sprinkleralign
@@ -76,5 +75,29 @@ ReadGui()
 
 SaveData()
 {
+    ReadGui()
 
+    IniWrite,%farmpattern%,%filepath%,regular,farmpattern
+    IniWrite,%patternsize%,%filepath%,regular,patternsize
+    IniWrite,%sprinkleralign%,%filepath%,regular,sprinkleralign
+    IniWrite,%plantalign%,%filepath%,regular,plantalign
+    IniWrite,%usemicros%,%filepath%,regular,usemicros
+    IniWrite,%toggle1%,%filepath%,regular,toggle1
+    IniWrite,%toggle2%,%filepath%,regular,toggle2
+    IniWrite,%toggle3%,%filepath%,regular,toggle3
+    IniWrite,%timer1%,%filepath%,regular,timer1
+    IniWrite,%timer2%,%filepath%,regular,timer2
+    IniWrite,%timer3%,%filepath%,regular,timer3
+    IniWrite,%key1%,%filepath%,regular,key1
+    IniWrite,%key2%,%filepath%,regular,key2
+    IniWrite,%key3%,%filepath%,regular,key3
+
+    IniWrite,%gumdropkey%,%filepath%,regular,gumdropkey
+    IniWrite,%jbkey%,%filepath%,regular,jbkey
+    IniWrite,%cloudkey%,%filepath%,regular,cloudkey
+    IniWrite,%commandgumdrop%,%filepath%,regular,commandgumdrop
+    IniWrite,%gumdroptime%,%filepath%,regular,gumdroptime
+    IniWrite,%commandjb%,%filepath%,regular,commandjb
+    IniWrite,%commandcloud%,%filepath%,regular,commandcloud
+    IniWrite,%cloudtime%,%filepath%,regular,cloudtime
 }
