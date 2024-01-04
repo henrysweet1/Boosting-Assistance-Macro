@@ -43,6 +43,29 @@ ReadData()
     IniRead,commandjb,%filepath%,regular,commandjb
     IniRead,commandcloud,%filepath%,regular,commandcloud
     IniRead,cloudtime,%filepath%,regular,cloudtime
+
+    if (sprinkleralign){
+        sprinkleralign := "Checked"
+    }if (plantalign){
+        plantalign := "Checked"
+    }if (usemicros){
+        usemicros := "Checked"
+    }if (toggle1){
+        toggle1 := "Checked"
+    }if (toggle2){
+        toggle2 := "Checked"
+    }if (toggle3){
+        toggle3 := "Checked"
+    }
+
+    if (commandgumdrop){
+        commandgumdrop := "Checked"
+    }if (commandjb){
+        commandjb := "Checked"
+    }if (commandcloud){
+        commandcloud := "Checked"
+    }
+
 }
 
 
