@@ -17,7 +17,7 @@ global commandcloud
 global cloudtime
 
 
-Readdata()
+ReadData()
 {
     filepath := "Source_Code\Macro_Parts\Alt\data\data.ini"
 
@@ -44,4 +44,37 @@ Readdata()
     IniRead,commandjb,%filepath%,regular,commandjb
     IniRead,commandcloud,%filepath%,regular,commandcloud
     IniRead,cloudtime,%filepath%,regular,cloudtime
+}
+
+
+ReadGui()
+{
+    GuiControlGet,farmpattern,,farmpattern
+    GuiControlGet,patternsize,,patternsize
+    GuiControlGet,sprinkleralign,,sprinkleralign
+    GuiControlGet,plantalign,,plantalign
+    GuiControlGet,usemicros,,usemicros
+    GuiControlGet,toggle1,,toggle1
+    GuiControlGet,toggle2,,toggle2
+    GuiControlGet,toggle3,,toggle3
+    GuiControlGet,timer1,,timer1
+    GuiControlGet,timer2,,timer2
+    GuiControlGet,timer3,,timer3
+    GuiControlGet,key1,,key1
+    GuiControlGet,key2,,key2
+    GuiControlGet,key3,,key3
+
+    GuiControlGet,gumdropkey,,gumdropkey
+    GuiControlGet,jbkey,,jbkey
+    GuiControlGet,cloudkey,,cloudkey
+    GuiControlGet,commandgumdrop,,commandgumdrop
+    GuiControlGet,gumdroptime,,gumdroptime
+    GuiControlGet,commandjb,,commandjb
+    GuiControlGet,commandcloud,,commandcloud
+    GuiControlGet,cloudtime,,cloudtime
+}
+
+SaveData()
+{
+
 }
