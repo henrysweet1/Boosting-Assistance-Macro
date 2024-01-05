@@ -98,6 +98,15 @@ ReadCommandGui()
     GuiControlGet,commandjb,,commandjb
     GuiControlGet,commandcloud,,commandcloud
     GuiControlGet,cloudtime,,cloudtime
+    
+    IniWrite,%gumdropkey%,%filepath%,command,gumdropkey
+    IniWrite,%jbkey%,%filepath%,command,jbkey
+    IniWrite,%cloudkey%,%filepath%,command,cloudkey
+    IniWrite,%commandgumdrop%,%filepath%,command,commandgumdrop
+    IniWrite,%gumdroptime%,%filepath%,command,gumdroptime
+    IniWrite,%commandjb%,%filepath%,command,commandjb
+    IniWrite,%commandcloud%,%filepath%,command,commandcloud
+    IniWrite,%cloudtime%,%filepath%,command,cloudtime
 }
 
 SaveData()
@@ -118,16 +127,4 @@ SaveData()
     IniWrite,%key1%,%filepath%,regular,key1
     IniWrite,%key2%,%filepath%,regular,key2
     IniWrite,%key3%,%filepath%,regular,key3
-
-    if (loadedcommandgui)
-    {
-        IniWrite,%gumdropkey%,%filepath%,command,gumdropkey
-        IniWrite,%jbkey%,%filepath%,command,jbkey
-        IniWrite,%cloudkey%,%filepath%,command,cloudkey
-        IniWrite,%commandgumdrop%,%filepath%,command,commandgumdrop
-        IniWrite,%gumdroptime%,%filepath%,command,gumdroptime
-        IniWrite,%commandjb%,%filepath%,command,commandjb
-        IniWrite,%commandcloud%,%filepath%,command,commandcloud
-        IniWrite,%cloudtime%,%filepath%,command,cloudtime
-    }
 }
