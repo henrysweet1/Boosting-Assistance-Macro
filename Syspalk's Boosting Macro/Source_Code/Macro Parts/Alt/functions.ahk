@@ -232,3 +232,31 @@ checkcommands()
     }
     return false
 }
+
+usecommandmats()
+{
+    ReadData()
+    if (commandjb)
+    {
+        if (jbkey != "")
+        {
+            Send %jbkey%
+        }
+    }
+
+    if (commandcloud)
+    {
+        if (cloudkey != "")
+        {
+            if (cloudtime = cloudtimer)
+            {
+                Send %cloudkey%
+                global cloudtimer := 1
+            }
+            else
+            {
+                global cloudtimer := cloudtimer + 1
+            }
+        }
+    }
+}

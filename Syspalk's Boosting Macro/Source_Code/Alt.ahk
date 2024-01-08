@@ -24,7 +24,7 @@ while (1)
     checkbag()
     if (checkcommands() = true)
     {
-        ;usecommandmats()
+        usecommandmats()
         ;if (commandgumdrop)
         ;{
             ;ENABLE THE GUMDROP SETTIMER HERE
