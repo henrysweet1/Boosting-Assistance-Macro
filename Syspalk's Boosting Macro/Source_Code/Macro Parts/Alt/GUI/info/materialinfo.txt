@@ -1,6 +1,6 @@
 Here you have 3 slots to manage your hotbar.
 
-The checkbox acts as a switch to enable or disable a certain slot.
+The checkboxes act as a switch to enable or disable a certain slot.
 
 in the time box you input (in ms) how often you want this specific slot in your hotbar to be used.
 
