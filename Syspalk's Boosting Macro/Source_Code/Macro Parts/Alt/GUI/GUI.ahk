@@ -8,7 +8,7 @@ global infocol := "53ede5"
 Gui,Add,DropDownList, x20 y70 w90 h200 vfarmpattern,%farmpattern%||None|zigzag|squares|zigzag++
 Gui,Add,Text, xp+15 yp-20 cwhite,Pattern                               Size
 Gui,Add,Slider, Left ToolTip xp+115 yp+15 range0-100 vpatternsize,%patternsize%
-Gui,Add,Text, xp+160 yp+10 w10 h17 c%infocol%,?
+Gui,Add,Text, xp+160 yp+10 w10 h17 c%infocol% gpatterninfo,?
 Gui,Add,checkbox,yp+35 x20 cwhite %sprinkleralign% vsprinkleralign,Align to sprinkler
 Gui,Add,checkbox,yp+20 x20 cwhite %plantalign% vplantalign,Align to planter
 Gui,Add,Checkbox,yp+25 x20 cwhite %usemicros% vusemicros,Use micro converter when full bag.
@@ -56,4 +56,15 @@ loadcommandmats()
 	Gui, command:add,Text, xp+55 yp cwhite,commands.
 
 	Gui, command:show,,Command mats
+}
+
+popup(SizeX,SizeY,FontSize,Title,Text){
+	Textloc := SizeX-20
+	borderheight := SizeY + 7
+	Gui, popup:Destroy
+	Gui, popup:Add,groupbox,x0 y-7 w%SizeX% h%borderheight%
+	Gui, popup:color,0x2A2F32
+	Gui, popup:Font,s%FontSize%,Segoe UI
+	Gui, popup:Add,Text, +wrap x10 y5 w%Textloc% cwhite,%Text%
+	Gui, popup:Show, w%SizeX% h%SizeY%,%Title%
 }

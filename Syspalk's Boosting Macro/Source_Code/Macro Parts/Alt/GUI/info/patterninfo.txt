@@ -1,0 +1,5 @@
+This is the pattern that the alt will walk in while you're boosting.
+
+I would always recommend zigzag++ as it's the most efficient at picking up ability tokens.
+
+The size of the pattern can be modified using the slider.
