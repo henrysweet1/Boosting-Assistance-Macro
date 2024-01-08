@@ -12,7 +12,6 @@ global gumdropkey
 global jbkey
 global cloudkey
 global commandgumdrop
-global gumdroptime
 global commandjb
 global commandcloud
 global cloudtime
@@ -43,7 +42,6 @@ ReadData()
     IniRead,jbkey,%filepath%,command,jbkey
     IniRead,cloudkey,%filepath%,command,cloudkey
     IniRead,commandgumdrop,%filepath%,command,commandgumdrop
-    IniRead,gumdroptime,%filepath%,command,gumdroptime
     IniRead,commandjb,%filepath%,command,commandjb
     IniRead,commandcloud,%filepath%,command,commandcloud
     IniRead,cloudtime,%filepath%,command,cloudtime
@@ -107,7 +105,6 @@ ReadCommandGui()
     IniWrite,%jbkey%,%filepath%,command,jbkey
     IniWrite,%cloudkey%,%filepath%,command,cloudkey
     IniWrite,%commandgumdrop%,%filepath%,command,commandgumdrop
-    IniWrite,%gumdroptime%,%filepath%,command,gumdroptime
     IniWrite,%commandjb%,%filepath%,command,commandjb
     IniWrite,%commandcloud%,%filepath%,command,commandcloud
     IniWrite,%cloudtime%,%filepath%,command,cloudtime

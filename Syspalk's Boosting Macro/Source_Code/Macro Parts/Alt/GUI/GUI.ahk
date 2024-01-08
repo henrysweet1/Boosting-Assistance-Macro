@@ -47,11 +47,8 @@ loadcommandmats()
 	Gui, command:add,Text,x30 yp+25 cred,Cloud vial
 	Gui, command:add,Edit,limit1 xp+90 yp-3 w20 h20 gReadCommandGui vcloudkey,%cloudkey%
 
-	Gui, command:add,groupbox, x20 yp+40 w340 h175 cwhite,Options
+	Gui, command:add,groupbox, x20 yp+40 w340 h155 cwhite,Options
 	Gui, command:add,Checkbox, x30 yp+25 cwhite %commandgumdrop% gReadCommandGui vcommandgumdrop,Use gumdrops upon receiving command.
-	Gui, command:add,Text, x30 yp+25 cwhite,Use gumdrops for
-	Gui, command:add,Edit, xp+130 yp w50 h20 gReadCommandGui vgumdroptime,%gumdroptime%
-	Gui, command:add,Text, xp+55 yp cwhite,Seconds
 	Gui, command:add,Checkbox, x30 yp+35 cwhite %commandjb% gReadCommandGui vcommandjb,Use Jelly beans upon receiving command.
 	Gui, command:add,Checkbox, x30 yp+35 cwhite %commandcloud% gReadCommandGui vcommandcloud,Use a cloud upon receiving command.
 	Gui, command:add,Text, x30 yp+25 cwhite,Use a cloud every
