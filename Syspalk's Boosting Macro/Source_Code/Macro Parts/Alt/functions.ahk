@@ -215,3 +215,11 @@ checkbag()
         Send %microkey%
     }
 }
+
+ReleaseAllKeys()
+{
+    walkhold("f","Up")
+    walkhold("l","Up")
+    walkhold("b","Up")
+    walkhold("r","Up")
+}

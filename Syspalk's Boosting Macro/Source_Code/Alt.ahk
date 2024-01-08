@@ -16,6 +16,7 @@ ReadData()
 
 F1::
 StartTimers()
+ReleaseAllKeys()
 while (1)
 {
     pattern()
