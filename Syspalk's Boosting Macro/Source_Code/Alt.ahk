@@ -17,6 +17,25 @@ F1::
 while (1)
 {
     pattern()
+    ;align()
+    ;checkbag()
+    ;if (checkcommands() = true)
+    ;{
+        ;usecommandmats()
+        ;if (commandgumdrop)
+        ;{
+            ;ENABLE THE GUMDROP SETTIMER HERE
+            ;starttime := A_TickCount
+            ;While(A_TickCount - starttime < 40000)
+            ;{
+                ;pattern()
+                ;align()
+                ;checkbag()
+            ;}
+            ;DISABLE THE GUMDROP SETTIMER HERE
+        ;}
+        ;chatflood()
+    ;}
 }
 
 GuiClose:
