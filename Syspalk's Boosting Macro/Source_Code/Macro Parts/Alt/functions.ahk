@@ -2,8 +2,8 @@
 {
     switch dir ;switch to convert direction into a key
     {
-        Case "f": key := "z"
-        Case "l": key := "q"
+        Case "f": key := "w"
+        Case "l": key := "a"
         Case "b": key := "s"
         Case "r": key := "d"
     }
