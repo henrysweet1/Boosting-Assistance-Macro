@@ -9,8 +9,8 @@ Gui,Add,DropDownList, x20 y70 w90 h200 vfarmpattern,%farmpattern%||None|zigzag|s
 Gui,Add,Text, xp+15 yp-20 cwhite,Pattern                               Size
 Gui,Add,Slider, Left ToolTip xp+115 yp+15 range0-100 vpatternsize,%patternsize%
 Gui,Add,Text, xp+160 yp+10 w10 h17 c%infocol%,?
-Gui,Add,Radio,yp+35 x20 cwhite %sprinkleralign% vsprinkleralign,Align to sprinkler
-Gui,Add,Radio,yp+20 x20 cwhite %plantalign% vplantalign,Align to planter
+Gui,Add,checkbox,yp+35 x20 cwhite %sprinkleralign% vsprinkleralign,Align to sprinkler
+Gui,Add,checkbox,yp+20 x20 cwhite %plantalign% vplantalign,Align to planter
 Gui,Add,Checkbox,yp+25 x20 cwhite %usemicros% vusemicros,Use micro converter when full bag.
 
 Gui,Add,Groupbox,x25 yp+30 w300 h130 cwhite,Materials
