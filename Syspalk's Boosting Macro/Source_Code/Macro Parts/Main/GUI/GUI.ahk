@@ -16,6 +16,7 @@ loop 7{
 	Gui, Add,Edit,number xp+120 yp-3 w100 h20 vtimer%A_Index% ,%timer%
 	Gui, Add,Edit,limit1 xp+120 yp w20 h20 vkey%A_Index% ,%key%
 }
+Gui,Add,Text,yp-205 xp-115 cblue,Delays (ms)    Hotkeys
 
 Gui,Font, s11
 Gui,Add,Text,y370 x15 cwhite,START: F1            STOP: F2            PAUSE: F3
