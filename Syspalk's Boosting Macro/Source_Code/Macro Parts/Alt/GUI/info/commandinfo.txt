@@ -1,0 +1,1 @@
+When receiving a command which is sent by the main account through chat you can choose for your alt account to do specific things such as: uses gumdrops for 45 seconds (the duration of a star), drop a jellybean and also drop clouds every X times it receives a command for example every third command it uses one meaning every third star in your boost.

@@ -1,0 +1,3 @@
+Fuzzy alts often run into issues with filling up somewhere during the boost which will lead to you losing pollination and everything going to shit.
+
+When you enable this feature it will empty your bag using a microconverter when your bag is full.

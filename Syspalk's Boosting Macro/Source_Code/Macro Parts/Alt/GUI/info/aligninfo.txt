@@ -1,0 +1,3 @@
+These options are made to compensate for drifting around the field which can be caused by things such as haste and lag.
+
+when alignment to sprinkler is enabled it will seek for a supreme sprinkler and farm on top of it, when alignment to a planter is enabled it will look for a fully grown planter (has to be fully grown) and stay anchored on top of the planter.
