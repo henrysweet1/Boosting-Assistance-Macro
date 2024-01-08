@@ -22,5 +22,15 @@ microinfo()
 
 materialinfo()
 {
+
+}
+
+hotkeyinfo()
+{
+
+}
+
+commandinfo()
+{
     
 }

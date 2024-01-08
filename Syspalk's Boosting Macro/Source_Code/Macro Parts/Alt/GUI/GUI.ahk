@@ -44,7 +44,7 @@ loadcommandmats()
 	Gui, command:color,0x2A2F32
 	Gui, command:Font,s10 Bold
 
-	Gui, command:add,groupbox, x20 y20 w130 h90 cwhite, Hotkeys
+	Gui, command:add,groupbox, x20 y20 w145 h90 cwhite, Hotkeys
 	Gui, command:add,Text,x30 y40 cred,Gumdrops
 	Gui, command:add,Edit,limit1 xp+90 yp-3 w20 h20 gReadCommandGui vgumdropkey,%gumdropkey%
 	Gui, command:add,Text,x30 yp+25 cred,Jelly Beans
@@ -59,6 +59,9 @@ loadcommandmats()
 	Gui, command:add,Text, x30 yp+25 cwhite,Use a cloud every
 	Gui, command:add,Edit, xp+130 yp w50 h20 gReadCommandGui vcloudtime,%cloudtime%
 	Gui, command:add,Text, xp+55 yp cwhite,commands.
+
+	Gui, command:Add,Text, x150 y35 w10 h17 c%infocol% ghotkeyinfo,?
+	Gui, command:Add,Text, x345 y135 w10 h17 c%infocol% gcommandinfo,?
 
 	Gui, command:show,,Command mats
 }
