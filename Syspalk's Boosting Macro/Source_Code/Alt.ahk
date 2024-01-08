@@ -10,10 +10,12 @@ ReadData()
 #Include Source_Code/Macro Parts/Alt/GUI/GUI.ahk
 #Include Source_Code/Macro Parts/Alt/functions.ahk
 #Include Source_Code/Macro Parts/Alt/patterns.ahk
+#Include Source_Code/Macro Parts/Alt/timers.ahk
 
 
 
 F1::
+StartTimers()
 while (1)
 {
     pattern()
