@@ -30,6 +30,11 @@ Gui,Add,Button,x205 y115,Command mats
 
 Gui,Font, s11
 Gui,Add,Text,y350 x15 cwhite,START: F1            STOP: F2            PAUSE: F3
+
+Gui,Add,Text, x170 y120 w10 h17 c%infocol% galigninfo,?
+Gui,Add,Text, x290 y155 w10 h17 c%infocol% gmicroinfo,?
+Gui,Add,Text, x310 y315 w10 h17 c%infocol% gmaterialinfo,?
+
 Gui,Show, w350 h380,Syspalk's Boost macro %version%
 
 loadcommandmats()
