@@ -14,3 +14,25 @@
         }
     }
 }
+
+createhotkey()
+{
+    GuiControlGet,commandkey
+    try
+    {
+        Hotkey,%commandkey%,SendCommand
+    }
+    catch
+    {
+        Msgbox,INVALID COMMAND HOTKEY!
+    }
+}
+
+SendCommand()
+{
+    Send /
+    sleep 10
+    SendInput VROOM 🚗
+    sleep 10
+    SendInput {Enter}
+}

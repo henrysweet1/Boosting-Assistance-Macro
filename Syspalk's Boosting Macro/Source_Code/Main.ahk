@@ -11,6 +11,7 @@ Fileread,version,Source_Code\Macro Parts\General\version.txt
 
 
 F1::
+createhotkey()
 while (1)
 {
     checkkeys()
