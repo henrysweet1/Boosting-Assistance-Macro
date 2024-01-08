@@ -8,13 +8,15 @@ Fileread,version,Source_Code\Macro Parts\General\version.txt
 ReadData()
 #Include Source_Code/Macro parts/Alt/GUI/Buttons.ahk
 #Include Source_Code/Macro Parts/Alt/GUI/GUI.ahk
+#Include Source_Code/Macro Parts/Alt/functions.ahk
+#Include Source_Code/Macro Parts/Alt/patterns.ahk
 
 
 
 F1::
 while (1)
 {
-
+    pattern()
 }
 
 GuiClose:
