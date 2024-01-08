@@ -7,7 +7,20 @@ Fileread,version,Source_Code\Macro Parts\General\version.txt
 #Include Source_Code/Macro Parts/Main/data handler.ahk
 #Include Source_Code/Macro Parts/Main/GUI/GUI.ahk
 
-Return
+
+
+F1::
+while (1)
+{
+
+}
+
 guiclose:
 savedata()
 ExitApp
+
+F2::
+Reload
+return
+
+F3::Pause
