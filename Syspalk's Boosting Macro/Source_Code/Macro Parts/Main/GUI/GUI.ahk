@@ -4,13 +4,19 @@ Gui,Font,s17 Bold Underline
 Gui,Add,Text, x107 cwhite ,Main Macro
 Gui,Font,s10 norm Bold
 
+IniRead,commandkey,%filepath%,commandkey,commandkey
 Gui,Add,Text, x25 yp+50 cwhite,Command hotkey:
 Gui,Add,Edit, xp+130 yp w100 h20 vcommandkey,%commandkey%
 Gui,Add,Groupbox,x25 yp+40 w300 h250 cwhite,Materials
 loop 7{
-	toggle := toggle%A_Index%
-	timer := timer%A_Index%
-	key := key%A_Index%
+    iniRead,timer,%filepath%,timers,timer%A_Index%
+	IniRead,toggle,%filepath%,toggles,toggle%A_Index%
+	IniRead,key,%filepath%,keys,key%A_Index%
+
+    if (toggle = 1)
+    {
+        toggle := "Checked"
+    }
 
 	Gui, Add, Checkbox, x35 yp+34 cred %toggle% vtoggle%A_Index%,Hotbar slot %A_Index%
 	Gui, Add,Edit,number xp+120 yp-3 w100 h20 vtimer%A_Index% ,%timer%

@@ -4,4 +4,10 @@ SetBatchLines, -1
 SetDefaultMouseSpeed, 3
 ListLines Off
 Fileread,version,Source_Code\Macro Parts\General\version.txt
+#Include Source_Code/Macro Parts/Main/data handler.ahk
 #Include Source_Code/Macro Parts/Main/GUI/GUI.ahk
+
+Return
+guiclose:
+savedata()
+ExitApp
