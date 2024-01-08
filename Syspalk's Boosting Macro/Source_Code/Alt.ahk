@@ -11,6 +11,7 @@ ReadData()
 #Include Source_Code/Macro Parts/Alt/functions.ahk
 #Include Source_Code/Macro Parts/Alt/patterns.ahk
 #Include Source_Code/Macro Parts/Alt/timers.ahk
+createshortcut()
 
 
 
