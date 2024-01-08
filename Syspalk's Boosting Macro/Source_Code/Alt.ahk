@@ -27,7 +27,7 @@ while (1)
         usecommandmats()
         if (commandgumdrop)
         {
-            ;ENABLE THE GUMDROP SETTIMER HERE
+            StartGumdropTimer()
             starttime := A_TickCount
             While(A_TickCount - starttime < 40000)
             {
@@ -35,15 +35,11 @@ while (1)
                 align()
                 checkbag()
             }
-            ;DISABLE THE GUMDROP SETTIMER HERE
+            StopGumdropTimer()
         }
         chatflood()
     }
 }
-
-F4::
-chatflood()
-return
 
 GuiClose:
 SaveData()

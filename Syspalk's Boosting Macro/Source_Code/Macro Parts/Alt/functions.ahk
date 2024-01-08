@@ -267,3 +267,19 @@ chatflood()
         sleep 25
     }
 }
+
+StartGumdropTimer()
+{
+    Settimer,UseGumdrop,250
+}
+
+StopGumdropTimer()
+{
+    Settimer,UseGumdrop,Off
+}
+
+UseGumdrop()
+{
+    ReadData()
+    Send %gumdropkey%
+}
