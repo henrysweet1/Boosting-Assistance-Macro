@@ -238,25 +238,32 @@ usecommandmats()
     ReadData()
     if (commandjb)
     {
-        if (jbkey != "")
-        {
-            Send %jbkey%
-        }
+        Send %jbkey%
     }
 
     if (commandcloud)
     {
-        if (cloudkey != "")
+        if (cloudtime <= cloudtimer)
         {
-            if (cloudtime = cloudtimer)
-            {
-                Send %cloudkey%
-                global cloudtimer := 1
-            }
-            else
-            {
-                global cloudtimer := cloudtimer + 1
-            }
+            Send %cloudkey%
+            global cloudtimer := 1
         }
+        else
+        {
+            global cloudtimer := cloudtimer + 1
+        }
+    }
+}
+
+chatflood()
+{
+    loop 15
+    {
+        Send /
+        sleep 25
+        Send 🎶
+        sleep 25
+        SendInput {Enter}
+        sleep 25
     }
 }

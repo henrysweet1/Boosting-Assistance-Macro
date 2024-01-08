@@ -25,26 +25,25 @@ while (1)
     if (checkcommands() = true)
     {
         usecommandmats()
-        ;if (commandgumdrop)
-        ;{
+        if (commandgumdrop)
+        {
             ;ENABLE THE GUMDROP SETTIMER HERE
-            ;starttime := A_TickCount
-            ;While(A_TickCount - starttime < 40000)
-            ;{
-                ;pattern()
-                ;align()
-                ;checkbag()
-            ;}
+            starttime := A_TickCount
+            While(A_TickCount - starttime < 40000)
+            {
+                pattern()
+                align()
+                checkbag()
+            }
             ;DISABLE THE GUMDROP SETTIMER HERE
-        ;}
-        ;chatflood()
+        }
+        chatflood()
     }
 }
 
 F4::
-loop{
-    Tooltip % checkcommands()
-}
+chatflood()
+return
 
 GuiClose:
 SaveData()
