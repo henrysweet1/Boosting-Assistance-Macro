@@ -1,1 +1,16 @@
-﻿
+﻿checkkeys()
+{
+    sleep 5
+    loop 7{
+        GuiControlGet,toggle%A_Index%
+        GuiControlGet,timer%A_Index%
+        GuiControlGet,key%A_Index%
+        toggle := toggle%A_Index%
+        timer := timer%A_Index%
+        key := key%A_Index%
+        if (toggle && A_TickCount - toggle%A_Index%timer > timer){
+            toggle%A_Index%timer := A_TickCount
+            Send %key%
+        }
+    }
+}

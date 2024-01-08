@@ -6,13 +6,14 @@ ListLines Off
 Fileread,version,Source_Code\Macro Parts\General\version.txt
 #Include Source_Code/Macro Parts/Main/data handler.ahk
 #Include Source_Code/Macro Parts/Main/GUI/GUI.ahk
+#Include Source_Code/Macro Parts/Main/functions.ahk
 
 
 
 F1::
 while (1)
 {
-
+    checkkeys()
 }
 
 guiclose:
@@ -20,6 +21,7 @@ savedata()
 ExitApp
 
 F2::
+savedata()
 Reload
 return
 
