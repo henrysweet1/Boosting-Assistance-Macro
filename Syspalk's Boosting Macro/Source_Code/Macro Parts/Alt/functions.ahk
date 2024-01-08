@@ -179,10 +179,39 @@ planteralign()
 
 }
 
-
-
 SearchFunctionv2(image,variation,x1,y1,x2,y2)
 {
 	ImageSearch, FoundX, FoundY, %x1%, %y1%, %x2%, %y2%, *%variation% Source_Code\Macro Parts\Alt\images\%image%
 	return [ErrorLevel,FoundX,FoundY]
+}
+
+bagcheck()
+{
+	if (SpecificPixelSearchFunction(0x1700F7,0,0,A_ScreenWidth,150)[1] = 0){
+		return true
+	}
+    return false
+}
+
+SpecificPixelSearchFunction(color,x1,y1,x2,y2)
+{
+	PixelSearch, FoundX, FoundY,%x1%,%y1%,%x2%,%y2%,%color%,,fast
+	return [ErrorLevel,FoundX,FoundY]
+}
+
+checkbag()
+{
+    ReadGui()
+    if not (usemicros)
+    {
+        return
+    }
+    if (microkey = "")
+    {
+        return
+    }
+    if (bagcheck() = true)
+    {
+        Send %microkey%
+    }
 }

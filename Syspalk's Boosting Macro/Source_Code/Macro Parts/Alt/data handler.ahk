@@ -3,6 +3,7 @@ global patternsize
 global sprinkleralign
 global plantalign
 global usemicros
+global microkey
 global toggle1, toggle2, toggle3
 global timer1, timer2, timer3
 global key1, key2, key3
@@ -26,6 +27,7 @@ ReadData()
     IniRead,sprinkleralign,%filepath%,regular,sprinkleralign
     IniRead,plantalign,%filepath%,regular,plantalign
     IniRead,usemicros,%filepath%,regular,usemicros
+    IniRead,microkey,%filepath%,regular,microkey
     IniRead,toggle1,%filepath%,regular,toggle1
     IniRead,toggle2,%filepath%,regular,toggle2
     IniRead,toggle3,%filepath%,regular,toggle3
@@ -77,6 +79,7 @@ ReadGui()
     GuiControlGet,sprinkleralign,,sprinkleralign
     GuiControlGet,plantalign,,plantalign
     GuiControlGet,usemicros,,usemicros
+    GuiControlGet,microkey,,microkey
     GuiControlGet,toggle1,,toggle1
     GuiControlGet,toggle2,,toggle2
     GuiControlGet,toggle3,,toggle3
@@ -118,6 +121,7 @@ SaveData()
     IniWrite,%sprinkleralign%,%filepath%,regular,sprinkleralign
     IniWrite,%plantalign%,%filepath%,regular,plantalign
     IniWrite,%usemicros%,%filepath%,regular,usemicros
+    IniWrite,%microkey%,%filepath%,regular,microkey
     IniWrite,%toggle1%,%filepath%,regular,toggle1
     IniWrite,%toggle2%,%filepath%,regular,toggle2
     IniWrite,%toggle3%,%filepath%,regular,toggle3

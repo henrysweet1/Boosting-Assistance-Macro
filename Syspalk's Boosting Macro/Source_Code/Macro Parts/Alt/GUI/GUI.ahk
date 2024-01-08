@@ -12,6 +12,8 @@ Gui,Add,Text, xp+160 yp+10 w10 h17 c%infocol%,?
 Gui,Add,checkbox,yp+35 x20 cwhite %sprinkleralign% vsprinkleralign,Align to sprinkler
 Gui,Add,checkbox,yp+20 x20 cwhite %plantalign% vplantalign,Align to planter
 Gui,Add,Checkbox,yp+25 x20 cwhite %usemicros% vusemicros,Use micro converter when full bag.
+Gui,Add,Text, xp yp+25 cwhite,Micro hotkey:
+Gui,Add,Edit,limit1 xp+100 yp w20 h20 vmicrokey,%microkey%
 
 Gui,Add,Groupbox,x25 yp+30 w300 h130 cwhite,Materials
 loop 3{
@@ -27,8 +29,8 @@ Gui,Add,Text,yp-82 xp-115 cblue,Delays (ms)    Hotkeys
 Gui,Add,Button,x205 y115,Command mats
 
 Gui,Font, s11
-Gui,Add,Text,y325 x15 cwhite,START: F1            STOP: F2            PAUSE: F3
-Gui,Show, w350 h355,Syspalk's Boost macro %version%
+Gui,Add,Text,y350 x15 cwhite,START: F1            STOP: F2            PAUSE: F3
+Gui,Show, w350 h380,Syspalk's Boost macro %version%
 
 loadcommandmats()
 {

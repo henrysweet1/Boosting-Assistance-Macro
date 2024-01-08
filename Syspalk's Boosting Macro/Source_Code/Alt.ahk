@@ -18,7 +18,7 @@ while (1)
 {
     pattern()
     align()
-    ;checkbag()
+    checkbag()
     ;if (checkcommands() = true)
     ;{
         ;usecommandmats()
