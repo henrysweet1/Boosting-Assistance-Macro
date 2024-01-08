@@ -22,8 +22,8 @@ while (1)
     pattern()
     align()
     checkbag()
-    ;if (checkcommands() = true)
-    ;{
+    if (checkcommands() = true)
+    {
         ;usecommandmats()
         ;if (commandgumdrop)
         ;{
@@ -38,7 +38,12 @@ while (1)
             ;DISABLE THE GUMDROP SETTIMER HERE
         ;}
         ;chatflood()
-    ;}
+    }
+}
+
+F4::
+loop{
+    Tooltip % checkcommands()
 }
 
 GuiClose:

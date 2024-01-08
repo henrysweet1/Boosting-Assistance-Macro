@@ -223,3 +223,12 @@ ReleaseAllKeys()
     walkhold("b","Up")
     walkhold("r","Up")
 }
+
+checkcommands()
+{
+    if (SearchFunctionv2("command.png",25,0,0,A_ScreenWidth,A_ScreenHeight)[1] = 0)
+    {
+        return true
+    }
+    return false
+}
