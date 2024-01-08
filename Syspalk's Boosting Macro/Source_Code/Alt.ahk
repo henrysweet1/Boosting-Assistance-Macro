@@ -17,7 +17,7 @@ F1::
 while (1)
 {
     pattern()
-    ;align()
+    align()
     ;checkbag()
     ;if (checkcommands() = true)
     ;{

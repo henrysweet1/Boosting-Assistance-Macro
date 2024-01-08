@@ -95,11 +95,6 @@ sprinkleralign()
 	}
 }
 
-planteralign()
-{
-
-}
-
 satsearcher(x1,y1,x2,y2)
 {
 	if (SearchFunctionv2("sprinkler1.png",0,x1,y1,x2,y2)[1] = 0)
@@ -118,14 +113,76 @@ satsearcher(x1,y1,x2,y2)
     {
 		return 0
 	}
+    else if (SearchFunctionv2("sprinkler5.png",0,x1,y1,x2,y2)[1] = 0)
+    {
+        return 0
+    }
 	else{
 		return 1
 	}
 }
 
+planteralign()
+{
+    WinGetPos,,,Winwidth,Winheight,Roblox
+	Top := WinHeight / 2.2
+	Bottom := WinHeight / 1.8
+	Leftt := Winwidth / 2.2
+	Rightt := Winwidth / 1.8
+    image := "planter.png"
+
+    if (SearchFunctionv2(image,10,0,0,Winwidth,Top) = 0){
+		walkhold("f","Down")
+		satstarttime := A_TickCount
+		while (A_TickCount - satstarttime < 2000){
+			if (SearchFunctionv2(image,10,0,0,Winwidth,Top)[1] = 1){
+				break
+			}
+			sleep 10
+		}
+		walkhold("f","Up")
+	}
+	else if (SearchFunctionv2(image,10,0,Bottom,Winwidth,WinHeight)[1] = 0){
+		walkhold("b","Down")
+		satstarttime := A_TickCount
+		while (A_TickCount - satstarttime < 2000){
+			if (SearchFunctionv2(image,10,0,Bottom,Winwidth,WinHeight)[1] = 1){
+				break
+			}
+			sleep 10
+		}
+		walkhold("b","Up")
+	}
+	
+	if (SearchFunctionv2(image,10,0,0,Leftt,Winheight)[1] = 0){
+		walkhold("l","Down")
+		satstarttime := A_TickCount
+		while (A_TickCount - satstarttime < 2000){
+			if (SearchFunctionv2(image,10,0,0,Leftt,Winheight)[1] = 1){
+				break
+			}
+			sleep 10
+		}
+		walkhold("l","Up")
+	}
+	else if (SearchFunctionv2(image,10,Rightt,0,WinWidth,Winheight)[1] = 0){
+		walkhold("r","Down")
+		satstarttime := A_TickCount
+		while (A_TickCount - satstarttime < 2000){
+			if (SearchFunctionv2(image,10,Rightt,0,WinWidth,Winheight)[1] = 1){
+				break
+			}
+			sleep 10
+		}
+		walkhold("r","Up")
+	}
+
+}
+
+
 
 SearchFunctionv2(image,variation,x1,y1,x2,y2)
 {
-	ImageSearch, FoundX, FoundY, %x1%, %y1%, %x2%, %y2%, *%variation% Source_Code\Macro Parts\images\%image%
+	ImageSearch, FoundX, FoundY, %x1%, %y1%, %x2%, %y2%, *%variation% Source_Code\Macro Parts\Alt\images\%image%
 	return [ErrorLevel,FoundX,FoundY]
 }
