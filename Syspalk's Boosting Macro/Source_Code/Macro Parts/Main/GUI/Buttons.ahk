@@ -9,5 +9,5 @@ keyinfo()
 ButtonList()
 {
     FileRead,text,%filepath%/Recommendedkeys.txt
-    popup(400,310,12,"command info",text)
+    popup(400,310,12,"List",text)
 }

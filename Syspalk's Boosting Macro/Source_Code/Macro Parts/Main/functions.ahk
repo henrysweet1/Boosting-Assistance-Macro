@@ -36,3 +36,10 @@ SendCommand()
     sleep 10
     SendInput {Enter}
 }
+
+createshortcut(){
+	filepath := A_Desktop . "\Main.lnk"
+	launcherpath := A_WorkingDir . "\Launch_Main.bat"
+	iconpath := A_WorkingDir . "\Source_Code\Macro Parts\General\logo.ico"
+	FileCreateShortcut,%launcherpath%,%filepath%,%A_WorkingDir%,,,%iconpath%
+}
