@@ -1,3 +1,5 @@
 This is used to send commands to an alt account so it knows when to use certain materials.
 
 Works using the alt macro inside of this macro.
+
+Click the "List" button next to this info button to find some recommended hotkeys.

@@ -6,6 +6,7 @@ ListLines Off
 Fileread,version,Source_Code\Macro Parts\General\version.txt
 #Include Source_Code/Macro Parts/Main/data handler.ahk
 #Include Source_Code/Macro Parts/Main/GUI/GUI.ahk
+#Include Source_Code/Macro Parts/Main/GUI/Buttons.ahk
 #Include Source_Code/Macro Parts/Main/functions.ahk
 
 

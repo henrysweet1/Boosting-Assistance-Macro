@@ -3,6 +3,7 @@ Gui,color,0x2A2F32
 Gui,Font,s17 Bold Underline
 Gui,Add,Text, x107 cwhite ,Main Macro
 Gui,Font,s10 norm Bold
+global infocol := "53ede5"
 
 IniRead,commandkey,%filepath%,commandkey,commandkey
 Gui,Add,Text, x25 yp+50 cwhite,Command hotkey:
@@ -27,4 +28,20 @@ Gui,Add,Text,yp-205 xp-115 cblue,Delays (ms)    Hotkeys
 
 Gui,Font, s11
 Gui,Add,Text,y370 x15 cwhite,START: F1            STOP: F2            PAUSE: F3
+Gui,Add,Text,x270 y65 c%infocol% gkeyinfo,?
+Gui,Add,Button,x300 y60,List
+
 Gui,Show, w350 h400,Syspalk's Boost macro %version%
+
+
+
+popup(SizeX,SizeY,FontSize,Title,Text){
+	Textloc := SizeX-20
+	borderheight := SizeY + 7
+	Gui, popup:Destroy
+	Gui, popup:Add,groupbox,x0 y-7 w%SizeX% h%borderheight%
+	Gui, popup:color,0x2A2F32
+	Gui, popup:Font,s%FontSize%,Segoe UI
+	Gui, popup:Add,Text, +wrap x10 y5 w%Textloc% cwhite,%Text%
+	Gui, popup:Show, w%SizeX% h%SizeY%,%Title%
+}

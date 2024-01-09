@@ -1,14 +1,13 @@
-SOME RECOMMENDED HOTKEYS TO SEND THE COMMAND
+SOME RECOMMENDED HOTKEYS
 
-1. f
-2. q
-3. XButton1 (side button on mouse)
-4. XButton2 (side button on mouse)
-5. r
-6. g
-7. t
-8. c
-9. x
-10. v
+1.  f
+2.  q
+3.  XButton1 (side button on mouse)
+4.  XButton2 (side button on mouse)
+5.  r
+6.  g
+7.  t
+8.  c
+9.  x
 
-you can find more on autohotkey.com/docs/v1/KeyList.htm
+you can find more about using keys on autohotkey.com/docs/v1/KeyList.html
