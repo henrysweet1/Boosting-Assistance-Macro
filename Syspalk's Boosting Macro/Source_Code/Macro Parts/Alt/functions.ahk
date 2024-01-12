@@ -239,6 +239,10 @@ usecommandmats()
     if (commandjb)
     {
         Send %jbkey%
+		Send {Shift}
+		sleep 3000
+		Send {Shift}
+		sleep 100
     }
 
     if (commandcloud)
