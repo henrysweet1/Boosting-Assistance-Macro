@@ -38,8 +38,8 @@ SendCommand()
 }
 
 createshortcut(){
-	filepath := A_Desktop . "\Main.lnk"
+	shortcutpath := A_Desktop . "\Main.lnk"
 	launcherpath := A_WorkingDir . "\Launch_Main.bat"
 	iconpath := A_WorkingDir . "\Source_Code\Macro Parts\General\logo.ico"
-	FileCreateShortcut,%launcherpath%,%filepath%,%A_WorkingDir%,,,%iconpath%
+	FileCreateShortcut,%launcherpath%,%shortcutpath%,%A_WorkingDir%,,,%iconpath%
 }
