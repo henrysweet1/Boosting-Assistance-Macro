@@ -285,8 +285,8 @@ UseGumdrop()
 }
 
 createshortcut(){
-	filepath := A_Desktop . "\Alt.lnk"
+	shortcutpath := A_Desktop . "\Alt.lnk"
 	launcherpath := A_WorkingDir . "\Launch_Alt.bat"
 	iconpath := A_WorkingDir . "\Source_Code\Macro Parts\General\logo.ico"
-	FileCreateShortcut,%launcherpath%,%filepath%,%A_WorkingDir%,,,%iconpath%
+	FileCreateShortcut,%launcherpath%,%shortcutpath%,%A_WorkingDir%,,,%iconpath%
 }

@@ -1,5 +1,4 @@
 ﻿#SingleInstance Force
-#Requires AutoHotkey v1.1.36.01+
 SetBatchLines, -1
 SetDefaultMouseSpeed, 3
 ListLines Off
