@@ -131,7 +131,7 @@ planteralign()
 	Rightt := Winwidth / 1.8
     image := "planter.png"
 
-    if (SearchFunctionv2(image,10,0,0,Winwidth,Top) = 0){
+    if (SearchFunctionv2(image,10,0,0,Winwidth,Top)[1] = 0){
 		walkhold("f","Down")
 		satstarttime := A_TickCount
 		while (A_TickCount - satstarttime < 2000){
