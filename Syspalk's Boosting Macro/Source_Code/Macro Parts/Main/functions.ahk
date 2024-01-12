@@ -33,7 +33,7 @@ SendCommand()
     Send /
     sleep 10
     SendInput VROOM 🚗
-    sleep 10
+    sleep 25
     SendInput {Enter}
 }
 
