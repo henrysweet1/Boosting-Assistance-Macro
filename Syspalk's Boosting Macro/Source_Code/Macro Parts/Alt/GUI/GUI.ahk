@@ -28,9 +28,12 @@ loop 3{
 Gui,Add,Text,yp-82 xp-115 cblue,Delays (ms)    Hotkeys
 Gui,Add,Button,x205 y115,Command mats
 
-Gui,Font, s11
-Gui,Add,Text,y350 x15 cwhite,START: F1            STOP: F2            PAUSE: F3
+Gui,Font, s11 Underline
+Gui,Add,Text,y350 x15 c53ede5 gstart,START: F1
+Gui,Add,Text,y350 x140 c53ede5 gstop,STOP: F2
+Gui,Add,Text,y350 x255 c53ede5 gpausee,PAUSE: F3
 
+Gui,Font, s11 norm bold
 Gui,Add,Text, x170 y120 w10 h17 c%infocol% galigninfo,?
 Gui,Add,Text, x290 y155 w10 h17 c%infocol% gmicroinfo,?
 Gui,Add,Text, x310 y315 w10 h17 c%infocol% gmaterialinfo,?

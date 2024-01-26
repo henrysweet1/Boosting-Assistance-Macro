@@ -15,6 +15,7 @@ createshortcut()
 
 
 F1::
+start:
 StartTimers()
 ReleaseAllKeys()
 while (1)
@@ -46,7 +47,12 @@ SaveData()
 ExitApp
 
 F2::
+stop:
 SaveData()
 Reload
 
 F3::Pause
+return
+
+pausee:
+Pause
