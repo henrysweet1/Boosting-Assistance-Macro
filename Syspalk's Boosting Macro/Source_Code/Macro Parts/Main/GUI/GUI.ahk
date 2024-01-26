@@ -2,11 +2,13 @@
 Gui,color,0x2A2F32
 Gui,Font,s17 Bold Underline
 Gui,Add,Text, x107 cwhite ,Main Macro
+Gui,Font,s10 Bold
+Gui,Add,Link, x127 yp+30 ,<a href="https://discord.gg/t572FnTqfs">Join Discord</a>
 Gui,Font,s10 norm Bold
 global infocol := "53ede5"
 
 IniRead,commandkey,%filepath%,commandkey,commandkey
-Gui,Add,Text, x25 yp+50 cwhite,Command hotkey:
+Gui,Add,Text, x25 yp+40 cwhite,Command hotkey:
 Gui,Add,Edit, xp+130 yp w100 h20 vcommandkey,%commandkey%
 Gui,Add,Groupbox,x25 yp+40 w300 h250 cwhite,Materials
 loop 7{
@@ -27,15 +29,15 @@ loop 7{
 Gui,Add,Text,yp-205 xp-115 cblue,Delays (ms)    Hotkeys
 
 Gui,Font, s11 underline
-Gui,Add,Text,y370 x15 c53ede5 gStart,START: F1
-Gui,Add,Text,y370 x140 c53ede5 gstop,STOP: F2
-Gui,Add,Text,y370 x255 c53ede5 gpausee,PAUSE: F3
+Gui,Add,Text,y390 x15 c53ede5 gStart,START: F1
+Gui,Add,Text,y390 x140 c53ede5 gstop,STOP: F2
+Gui,Add,Text,y390 x255 c53ede5 gpausee,PAUSE: F3
 
 Gui,Font, s11 norm bold
-Gui,Add,Text,x270 y65 c%infocol% gkeyinfo,?
-Gui,Add,Button,x300 y60,List
+Gui,Add,Text,x270 y85 c%infocol% gkeyinfo,?
+Gui,Add,Button,x300 y80,List
 
-Gui,Show, w350 h400,Syspalk's Boost macro %version%
+Gui,Show, w350 h420,Syspalk's Boost macro %version%
 
 
 
