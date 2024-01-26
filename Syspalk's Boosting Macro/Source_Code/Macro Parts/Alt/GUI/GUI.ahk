@@ -2,10 +2,12 @@
 Gui,color,0x2A2F32
 Gui,Font,s17 Bold Underline
 Gui,Add,Text, x120 cwhite ,Alt Macro
+Gui,Font,s10 Bold
+Gui,Add,Link, x127 yp+30 ,<a href="https://discord.gg/t572FnTqfs">Join Discord</a>
 Gui,Font,s10 norm Bold
 global infocol := "53ede5"
 
-Gui,Add,DropDownList, x20 y70 w90 h200 vfarmpattern,%farmpattern%||None|zigzag|squares|zigzag++
+Gui,Add,DropDownList, x20 yp+40 w90 h200 vfarmpattern,%farmpattern%||None|zigzag|squares|zigzag++
 Gui,Add,Text, xp+15 yp-20 cwhite,Pattern                               Size
 Gui,Add,Slider, Left ToolTip xp+115 yp+15 range0-100 vpatternsize,%patternsize%
 Gui,Add,Text, xp+160 yp+10 w10 h17 c%infocol% gpatterninfo,?
@@ -26,19 +28,19 @@ loop 3{
 	Gui, Add,Edit,limit1 xp+120 yp w20 h20 vkey%A_Index% ,%key%
 }
 Gui,Add,Text,yp-82 xp-115 cblue,Delays (ms)    Hotkeys
-Gui,Add,Button,x205 y115,Command mats
+Gui,Add,Button,x205 y130,Command mats
 
 Gui,Font, s11 Underline
-Gui,Add,Text,y350 x15 c53ede5 gstart,START: F1
-Gui,Add,Text,y350 x140 c53ede5 gstop,STOP: F2
-Gui,Add,Text,y350 x255 c53ede5 gpausee,PAUSE: F3
+Gui,Add,Text,y365 x15 c53ede5 gstart,START: F1
+Gui,Add,Text,y365 x140 c53ede5 gstop,STOP: F2
+Gui,Add,Text,y365 x255 c53ede5 gpausee,PAUSE: F3
 
 Gui,Font, s11 norm bold
-Gui,Add,Text, x170 y120 w10 h17 c%infocol% galigninfo,?
-Gui,Add,Text, x290 y155 w10 h17 c%infocol% gmicroinfo,?
-Gui,Add,Text, x310 y315 w10 h17 c%infocol% gmaterialinfo,?
+Gui,Add,Text, x170 y135 w10 h17 c%infocol% galigninfo,?
+Gui,Add,Text, x290 y170 w10 h17 c%infocol% gmicroinfo,?
+Gui,Add,Text, x310 y330 w10 h17 c%infocol% gmaterialinfo,?
 
-Gui,Show, w350 h380,Syspalk's Boost macro %version%
+Gui,Show, w350 h400,Syspalk's Boost macro %version%
 
 loadcommandmats()
 {
