@@ -26,8 +26,12 @@ loop 7{
 }
 Gui,Add,Text,yp-205 xp-115 cblue,Delays (ms)    Hotkeys
 
-Gui,Font, s11
-Gui,Add,Text,y370 x15 cwhite,START: F1            STOP: F2            PAUSE: F3
+Gui,Font, s11 underline
+Gui,Add,Text,y370 x15 c53ede5 gStart,START: F1
+Gui,Add,Text,y370 x140 c53ede5 gstop,STOP: F2
+Gui,Add,Text,y370 x255 c53ede5 gpausee,PAUSE: F3
+
+Gui,Font, s11 norm bold
 Gui,Add,Text,x270 y65 c%infocol% gkeyinfo,?
 Gui,Add,Button,x300 y60,List
 

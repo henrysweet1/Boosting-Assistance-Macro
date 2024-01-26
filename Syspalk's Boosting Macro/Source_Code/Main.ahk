@@ -26,8 +26,12 @@ savedata()
 ExitApp
 
 F2::
+stop:
 savedata()
 Reload
 return
 
 F3::Pause
+
+pausee:
+Pause
