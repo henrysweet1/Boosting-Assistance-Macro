@@ -10,9 +10,11 @@ Fileread,version,Source_Code\Macro Parts\General\version.txt
 #Include Source_Code/Macro Parts/Main/functions.ahk
 createshortcut()
 
+Hotkey, IfWinActive, ahk_class WINDOWSCLIENT ahk_exe RobloxPlayerBeta.exe
+Hotkey, F1, Start
+return
 
-
-F1::
+Start:
 createhotkey()
 while (1)
 {
