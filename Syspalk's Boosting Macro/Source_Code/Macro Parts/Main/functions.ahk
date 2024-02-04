@@ -28,6 +28,32 @@ createhotkey()
     }
 }
 
+createstartkey()
+{
+    GuiControlGet,startkey
+    try
+    {
+        Hotkey,%startkey%,StartCommand
+    }
+    catch
+    {
+        Msgbox,INVALID START HOTKEY!
+    }
+}
+
+createstopkey()
+{
+    GuiControlGet,stopkey
+    try
+    {
+        Hotkey,%stopkey%,StopCommand
+    }
+    catch
+    {
+        Msgbox,INVALID STOP HOTKEY!
+    }
+}
+
 SendCommand()
 {
     Chatsend("VROOM 🚗")
@@ -35,12 +61,12 @@ SendCommand()
 
 StartCommand()
 {
-    Chatsend("START!!!! 😁😁")
+    Chatsend("START 😁😁")
 }
 
 StopCommand()
 {
-    Chatsend("STOP!!!! 😎")
+    Chatsend("STOP 😎")
 }
 
 Chatsend(text)
