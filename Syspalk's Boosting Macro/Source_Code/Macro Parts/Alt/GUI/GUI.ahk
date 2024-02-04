@@ -16,7 +16,7 @@ Gui,Add,checkbox,yp+20 x20 cwhite %plantalign% vplantalign,Align to planter
 Gui,Add,Checkbox,yp+25 x20 cwhite %usemicros% vusemicros,Use micro converter when full bag.
 Gui,Add,Text, xp yp+25 cwhite,Micro hotkey:
 Gui,Add,Edit,limit1 xp+100 yp w20 h20 vmicrokey,%microkey%
-Gui,Add,Checkbox,yp+30 x20 cwhite %allowcommands% vallowcommands,Allow macro to be controlled externally
+Gui,Add,Checkbox,yp+30 x20 cwhite %allowcommands% vallowcommands,Allow macro to be controlled remotely
 
 Gui,Add,Groupbox,x25 yp+30 w300 h130 cwhite,Materials
 loop 3{
@@ -40,6 +40,7 @@ Gui,Font, s11 norm bold
 Gui,Add,Text, x170 y135 w10 h17 c%infocol% galigninfo,?
 Gui,Add,Text, x290 y170 w10 h17 c%infocol% gmicroinfo,?
 Gui,Add,Text, x310 y355 w10 h17 c%infocol% gmaterialinfo,?
+Gui,Add,Text, x315 y223 w10 h17 c%infocol% gremoteinfo,?
 
 Gui,Show, w350 h420,Syspalk's Boost macro %version%
 

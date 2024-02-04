@@ -39,3 +39,9 @@ commandinfo()
     FileRead, text,%infopath%/commandinfo.txt
     popup(400,160,12,"command info",text)
 }
+
+remoteinfo()
+{
+    FileRead, text,%infopath%/remoteinfo.txt
+    popup(400,200,12,"remotely controlled info",text)
+}

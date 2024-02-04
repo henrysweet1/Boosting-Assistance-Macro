@@ -1,0 +1,3 @@
+When enabling this feature you allow the macro te be started/stopped with the same system used for receiving commands.
+
+On the main macro you can set hotkeys for sending a start and a stop command, upon pressing the hotkey on your main account the alt accounts will see the message in the chat and then depending on which command it is the macros on the alts will stop or start.
