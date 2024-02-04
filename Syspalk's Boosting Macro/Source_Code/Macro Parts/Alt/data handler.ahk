@@ -7,6 +7,7 @@ global microkey
 global toggle1, toggle2, toggle3
 global timer1, timer2, timer3
 global key1, key2, key3
+global allowcommands
 
 global gumdropkey
 global jbkey
@@ -37,6 +38,7 @@ ReadData()
     IniRead,key1,%filepath%,regular,key1
     IniRead,key2,%filepath%,regular,key2
     IniRead,key3,%filepath%,regular,key3
+    IniRead,allowcommands,%filepath%,regular,allowcommands
 
     IniRead,gumdropkey,%filepath%,command,gumdropkey
     IniRead,jbkey,%filepath%,command,jbkey
@@ -58,6 +60,8 @@ ReadData()
         toggle2 := "Checked"
     }if (toggle3){
         toggle3 := "Checked"
+    }if (allowcommands){
+        allowcommands := "Checked"
     }
 
     if (commandgumdrop){
@@ -88,6 +92,7 @@ ReadGui()
     GuiControlGet,key1,,key1
     GuiControlGet,key2,,key2
     GuiControlGet,key3,,key3
+    GuiControlGet,allowcommands,,allowcommands
 }
 
 ReadCommandGui()
@@ -129,4 +134,5 @@ SaveData()
     IniWrite,%key1%,%filepath%,regular,key1
     IniWrite,%key2%,%filepath%,regular,key2
     IniWrite,%key3%,%filepath%,regular,key3
+    IniWrite,%allowcommands%,%filepath%,regular,allowcommands
 }

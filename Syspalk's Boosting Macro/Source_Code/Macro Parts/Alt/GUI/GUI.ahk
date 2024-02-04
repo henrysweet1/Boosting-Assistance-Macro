@@ -16,6 +16,7 @@ Gui,Add,checkbox,yp+20 x20 cwhite %plantalign% vplantalign,Align to planter
 Gui,Add,Checkbox,yp+25 x20 cwhite %usemicros% vusemicros,Use micro converter when full bag.
 Gui,Add,Text, xp yp+25 cwhite,Micro hotkey:
 Gui,Add,Edit,limit1 xp+100 yp w20 h20 vmicrokey,%microkey%
+Gui,Add,Checkbox,yp+30 x20 cwhite %allowcommands% vallowcommands,Allow macro to be controlled externally
 
 Gui,Add,Groupbox,x25 yp+30 w300 h130 cwhite,Materials
 loop 3{
@@ -31,16 +32,16 @@ Gui,Add,Text,yp-82 xp-115 cblue,Delays (ms)    Hotkeys
 Gui,Add,Button,x205 y130,Command mats
 
 Gui,Font, s11 Underline
-Gui,Add,Text,y365 x15 c53ede5 gstart,START: F1
-Gui,Add,Text,y365 x140 c53ede5 gstop,STOP: F2
-Gui,Add,Text,y365 x255 c53ede5 gpausee,PAUSE: F3
+Gui,Add,Text,y395 x15 c53ede5 gstart,START: F1
+Gui,Add,Text,y395 x140 c53ede5 gstop,STOP: F2
+Gui,Add,Text,y395 x255 c53ede5 gpausee,PAUSE: F3
 
 Gui,Font, s11 norm bold
 Gui,Add,Text, x170 y135 w10 h17 c%infocol% galigninfo,?
 Gui,Add,Text, x290 y170 w10 h17 c%infocol% gmicroinfo,?
-Gui,Add,Text, x310 y330 w10 h17 c%infocol% gmaterialinfo,?
+Gui,Add,Text, x310 y355 w10 h17 c%infocol% gmaterialinfo,?
 
-Gui,Show, w350 h400,Syspalk's Boost macro %version%
+Gui,Show, w350 h420,Syspalk's Boost macro %version%
 
 loadcommandmats()
 {
