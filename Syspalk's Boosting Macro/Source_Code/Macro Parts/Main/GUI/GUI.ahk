@@ -10,6 +10,15 @@ global infocol := "53ede5"
 IniRead,commandkey,%filepath%,commandkey,commandkey
 Gui,Add,Text, x25 yp+40 cwhite,Command hotkey:
 Gui,Add,Edit, xp+130 yp w100 h20 vcommandkey,%commandkey%
+
+IniRead,startkey,%filepath%,commandkey,startkey
+Gui,Add,Text, x25 yp+30 cwhite,Start alts hotkey:
+Gui,Add,Edit, xp+130 yp w100 h20 vstartkey,%startkey%
+
+IniRead,stopkey,%filepath%,commandkey,stopkey
+Gui,Add,Text, x25 yp+30 cwhite,Stop alts hotkey:
+Gui,Add,Edit, xp+130 yp w100 h20 vstopkey,%stopkey%
+
 Gui,Add,Groupbox,x25 yp+40 w300 h250 cwhite,Materials
 loop 7{
     iniRead,timer,%filepath%,timers,timer%A_Index%
@@ -29,15 +38,15 @@ loop 7{
 Gui,Add,Text,yp-205 xp-115 cblue,Delays (ms)    Hotkeys
 
 Gui,Font, s11 underline
-Gui,Add,Text,y390 x15 c53ede5 gStart,START: F1
-Gui,Add,Text,y390 x140 c53ede5 gstop,STOP: F2
-Gui,Add,Text,y390 x255 c53ede5 gpausee,PAUSE: F3
+Gui,Add,Text,y450 x15 c53ede5 gStart,START: F1
+Gui,Add,Text,y450 x140 c53ede5 gstop,STOP: F2
+Gui,Add,Text,y450 x255 c53ede5 gpausee,PAUSE: F3
 
 Gui,Font, s11 norm bold
 Gui,Add,Text,x270 y85 c%infocol% gkeyinfo,?
 Gui,Add,Button,x300 y80,List
 
-Gui,Show, w350 h420,Syspalk's Boost macro %version%
+Gui,Show, w350 h480,Syspalk's Boost macro %version%
 
 
 

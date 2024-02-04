@@ -16,5 +16,9 @@ savedata(){
 		IniWrite,%key%,%filepath%,keys,key%A_Index%
 	}
     GuiControlGet,commandkey
+	GuiControlGet,startkey
+	GuiControlGet,stopkey
     IniWrite,%commandkey%,%filepath%,commandkey,commandkey
+	IniWrite,%startkey%,%filepath%,commandkey,startkey
+	IniWrite,%stopkey%,%filepath%,commandkey,stopkey
 }
