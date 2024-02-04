@@ -30,9 +30,24 @@ createhotkey()
 
 SendCommand()
 {
+    Chatsend("VROOM 🚗")
+}
+
+StartCommand()
+{
+    Chatsend("START!!!! 😁😁")
+}
+
+StopCommand()
+{
+    Chatsend("STOP!!!! 😎")
+}
+
+Chatsend(text)
+{
     Send /
     sleep 10
-    SendInput VROOM 🚗
+    SendInput %text%
     sleep 25
     SendInput {Enter}
 }
