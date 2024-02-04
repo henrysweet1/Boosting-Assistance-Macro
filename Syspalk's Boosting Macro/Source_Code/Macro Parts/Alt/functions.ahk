@@ -233,6 +233,24 @@ checkcommands()
     return false
 }
 
+checkstartcommand()
+{
+    if (SearchFunctionv2("startcommand.png",25,0,0,A_ScreenWidth,A_ScreenHeight)[1] = 0)
+    {
+        return true
+    }
+    return false
+}
+
+checkstopcommand()
+{
+    if (SearchFunctionv2("stopcommand.png",25,0,0,A_ScreenWidth,A_ScreenHeight)[1] = 0)
+    {
+        return true
+    }
+    return false
+}
+
 usecommandmats()
 {
     ReadData()
