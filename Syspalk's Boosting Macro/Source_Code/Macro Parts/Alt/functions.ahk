@@ -251,6 +251,19 @@ checkstopcommand()
     return false
 }
 
+checkifhavetostop()
+{
+	GuiControlGet,allowcommands,,allowcommands
+    if (allowcommands)
+    {
+        if (checkstopcommand() = true)
+        {
+            Chatsend("DISARMED")
+            Reload
+        }
+    }
+}
+
 usecommandmats()
 {
     ReadData()

@@ -22,12 +22,6 @@ loop
             Chatsend("ARMED")
             Goto,start
         }
-
-        if (checkstopcommand() = true)
-        {
-            Chatsend("DISARMED")
-            Reload
-        }
     }
     sleep 1000
 }
@@ -41,6 +35,8 @@ while (1)
     pattern()
     align()
     checkbag()
+    checkifhavetostop()
+
     if (checkcommands() = true)
     {
         usecommandmats()
@@ -53,6 +49,7 @@ while (1)
                 pattern()
                 align()
                 checkbag()
+                checkifhavetostop()
             }
             StopGumdropTimer()
         }
