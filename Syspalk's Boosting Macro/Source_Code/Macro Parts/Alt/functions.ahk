@@ -290,6 +290,15 @@ chatflood()
     }
 }
 
+Chatsend(text)
+{
+    Send /
+    sleep 10
+    SendInput %text%
+    sleep 25
+    SendInput {Enter}
+}
+
 StartGumdropTimer()
 {
     Settimer,UseGumdrop,250

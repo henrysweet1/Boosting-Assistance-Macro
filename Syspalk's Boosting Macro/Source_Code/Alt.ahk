@@ -19,11 +19,13 @@ loop
     {
         if (checkstartcommand() = true)
         {
+            Chatsend("ARMED")
             Goto,start
         }
 
         if (checkstopcommand() = true)
         {
+            Chatsend("DISARMED")
             Reload
         }
     }
