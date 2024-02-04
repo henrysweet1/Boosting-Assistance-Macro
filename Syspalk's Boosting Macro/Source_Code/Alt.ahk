@@ -12,7 +12,23 @@ ReadData()
 #Include Source_Code/Macro Parts/Alt/timers.ahk
 createshortcut()
 
+loop
+{
+    GuiControlGet,allowcommands,,allowcommands
+    if (allowcommands)
+    {
+        if (checkstartcommand() = true)
+        {
+            Goto,start
+        }
 
+        if (checkstopcommand() = true)
+        {
+            Reload
+        }
+    }
+    sleep 1000
+}
 
 F1::
 start:
