@@ -1,0 +1,3 @@
+This is used if you want to signal to your alts to start their macro.
+
+Can be used when running multiple alts and you do not want to individually enable all of them.

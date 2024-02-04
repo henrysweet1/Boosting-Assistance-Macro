@@ -45,6 +45,8 @@ Gui,Add,Text,y450 x255 c53ede5 gpausee,PAUSE: F3
 Gui,Font, s11 norm bold
 Gui,Add,Text,x270 y85 c%infocol% gkeyinfo,?
 Gui,Add,Button,x300 y80,List
+Gui,Add,Text,x270 y115 c%infocol% gstartinfo,?
+Gui,Add,Text,x270 y145 c%infocol% gstopinfo,?
 
 Gui,Show, w350 h480,Syspalk's Boost macro %version%
 
