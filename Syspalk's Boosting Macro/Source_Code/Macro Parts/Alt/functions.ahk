@@ -293,6 +293,7 @@ usecommandmats()
 }
 
 chatflood()
+{
     loop 15
     {
         Send {ASC 47}
