@@ -259,7 +259,9 @@ checkifhavetostop()
         if (checkstopcommand() = true)
         {
             Chatsend("DISARMED")
-            Reload
+			chatflood()
+			SaveData()
+            ExitApp
         }
     }
 }
@@ -301,6 +303,7 @@ chatflood()
         sleep 25
     }
 }
+
 Chatsend(text)
 {
     Send {ASC 47}
