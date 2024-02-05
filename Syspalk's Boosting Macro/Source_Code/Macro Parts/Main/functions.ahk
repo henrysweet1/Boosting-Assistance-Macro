@@ -10,7 +10,7 @@
         key := key%A_Index%
         if (toggle && A_TickCount - toggle%A_Index%timer > timer){
             toggle%A_Index%timer := A_TickCount
-            Send %key%
+            Send, {Blind}%key%
         }
     }
 }
@@ -56,22 +56,22 @@ createstopkey()
 
 SendCommand()
 {
-    Chatsend("VROOM 🚗")
+    Chatsend("vroom 🚗")
 }
 
 StartCommand()
 {
-    Chatsend("START 😁😁")
+    Chatsend("start 😁😁")
 }
 
 StopCommand()
 {
-    Chatsend("STOP 😎")
+    Chatsend("stop 😎")
 }
 
 Chatsend(text)
 {
-    Send /
+    Send {ASC 47}
     sleep 10
     SendInput %text%
     sleep 25
