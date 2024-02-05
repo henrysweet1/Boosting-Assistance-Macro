@@ -291,18 +291,16 @@ usecommandmats()
 }
 
 chatflood()
-{
     loop 15
     {
         Send {ASC 47}
         sleep 35
-        Send 🎶
-        sleep 35
+        SendInput /w 🎶syspalkiusssssss🎶
+        sleep 100
         SendInput {Enter}
-        sleep 35
+        sleep 25
     }
 }
-
 Chatsend(text)
 {
     Send {ASC 47}
