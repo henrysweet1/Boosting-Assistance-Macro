@@ -297,11 +297,11 @@ chatflood()
     loop 15
     {
         Send {ASC 47}
-        sleep 35
-        SendInput /w 🎶syspalkiusssssss🎶
-        sleep 100
+        sleep 66
+        SendInput /w 🎶zyzpalkiuzzzzzzz🎶
+        sleep 66
         SendInput {Enter}
-        sleep 25
+        sleep 66
     }
 }
 
