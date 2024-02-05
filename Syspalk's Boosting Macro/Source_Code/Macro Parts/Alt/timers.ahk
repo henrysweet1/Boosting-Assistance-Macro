@@ -38,6 +38,5 @@ useitem2()
 
 useitem3()
 {
-    Tooltip,lksdjf
     Send %key3%
 }
