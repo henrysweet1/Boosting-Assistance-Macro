@@ -308,10 +308,11 @@ chatflood()
 Chatsend(text)
 {
     Send {ASC 47}
-    sleep 100
+    sleep 66
     SendInput %text%
-    sleep 25
+    sleep 66
     SendInput {Enter}
+	sleep 66
 }
 
 StartGumdropTimer()
