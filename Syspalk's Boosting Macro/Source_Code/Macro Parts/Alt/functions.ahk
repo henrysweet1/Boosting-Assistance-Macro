@@ -294,19 +294,19 @@ chatflood()
 {
     loop 15
     {
-        Send /
-        sleep 25
+        Send {ASC 47}
+        sleep 35
         Send 🎶
-        sleep 25
+        sleep 35
         SendInput {Enter}
-        sleep 25
+        sleep 35
     }
 }
 
 Chatsend(text)
 {
-    Send /
-    sleep 10
+    Send {ASC 47}
+    sleep 100
     SendInput %text%
     sleep 25
     SendInput {Enter}
