@@ -7,7 +7,7 @@ Gui,Add,Link, x127 yp+30 ,<a href="https://discord.gg/t572FnTqfs">Join Discord</
 Gui,Font,s10 norm Bold
 global infocol := "53ede5"
 
-Gui,Add,DropDownList, x20 yp+40 w90 h200 vfarmpattern,%farmpattern%||None|zigzag|squares|zigzag++
+Gui,Add,DropDownList, x20 yp+40 w90 h200 vfarmpattern,%farmpattern%||None|zigzag|squares|zigzag++|spiderpoli
 Gui,Add,Text, xp+15 yp-20 cwhite,Pattern                               Size
 Gui,Add,Slider, Left ToolTip xp+115 yp+15 range0-100 vpatternsize,%patternsize%
 Gui,Add,Text, xp+160 yp+10 w10 h17 c%infocol% gpatterninfo,?

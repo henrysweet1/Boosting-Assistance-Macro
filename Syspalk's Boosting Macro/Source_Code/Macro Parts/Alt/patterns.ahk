@@ -65,11 +65,11 @@ spideralt(size)
 {
 	loop 15
 	{
-		walk(100,"f")
+		walk(150,"f")
 		walk(100,"l")
 	}
-	walk(750,"b")
-	walk(750,"r")
+	walk(1500,"b")
+	walk(1000,"r")
 	zigzagpp(size)
 }
 
@@ -82,6 +82,8 @@ pattern(){ ;function that calls a function yes i know i went too far with the fu
 		squares(patternsize)
 	}else if (farmpattern = "zigzag++"){
 		zigzagpp(patternsize)
+	}else if (farmpattern = "spiderpoli"){
+		spideralt(patternsize)
 	}
 	Send {Click Left UP}
 	return
