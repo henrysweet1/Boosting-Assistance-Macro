@@ -59,7 +59,19 @@ squares(size){ ;idk why anyone would use this but look it's coded pretty nicely
 		walk(size,"l")
 		size := size + x
 	}
-} 
+}
+
+spideralt(size)
+{
+	loop 15
+	{
+		walk(100,"f")
+		walk(100,"l")
+	}
+	walk(750,"b")
+	walk(750,"r")
+	zigzagpp(size)
+}
 
 pattern(){ ;function that calls a function yes i know i went too far with the function spamming
 	ReadGui()
