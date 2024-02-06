@@ -294,25 +294,25 @@ usecommandmats()
 
 chatflood()
 {
-    loop 15
+    loop 10
     {
         Send {ASC 47}
-        sleep 66
+        sleep 132
         SendInput /w 🎶zyzpalkiuzzzzzzz🎶
-        sleep 66
+        sleep 132
         SendInput {Enter}
-        sleep 66
+        sleep 132
     }
 }
 
 Chatsend(text)
 {
     Send {ASC 47}
-    sleep 66
+    sleep 132
     SendInput %text%
-    sleep 66
+    sleep 132
     SendInput {Enter}
-	sleep 66
+	sleep 132
 }
 
 StartGumdropTimer()
