@@ -71,6 +71,9 @@ spideralt(size)
 	walk(1500,"b")
 	walk(1000,"r")
 	zigzagpp(size)
+	zigzagpp(size)
+	zigzagpp(size)
+	walk(400,"f")
 }
 
 pattern(){ ;function that calls a function yes i know i went too far with the function spamming
