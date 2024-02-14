@@ -294,6 +294,7 @@ usecommandmats()
 
 chatflood()
 {
+	global useitems := false
     loop 10
     {
         Send {ASC 47}
@@ -303,6 +304,7 @@ chatflood()
         SendInput {Enter}
         sleep 132
     }
+	global useitems := true
 }
 
 Chatsend(text)

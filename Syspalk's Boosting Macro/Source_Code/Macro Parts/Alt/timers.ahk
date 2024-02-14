@@ -28,15 +28,24 @@ StartTimer(which)
 
 useitem1()
 {
-    Send %key1%
+    if (useitems)
+    {
+        Send %key1%
+    }
 }
 
 useitem2()
 {
-    Send %key2%
+    if (useitems)
+    {
+        Send %key2%
+    }
 }
 
 useitem3()
 {
-    Send %key3%
+    if (useitems)
+    {
+        Send %key3%
+    }
 }

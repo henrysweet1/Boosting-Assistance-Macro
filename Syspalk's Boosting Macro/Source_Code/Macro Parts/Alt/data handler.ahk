@@ -20,6 +20,7 @@ global cloudtime
 global filepath := "Source_Code\Macro Parts\Alt\data\data.ini"
 global loadedcommandgui := false
 global cloudtimer := 1
+global useitems := true
 
 ReadData()
 {
