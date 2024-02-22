@@ -28,11 +28,13 @@ loop
 
 F1::
 start:
-StartTimers()
+macrostarttime := A_TickCount
+CheckStartTimers()
 ReleaseAllKeys()
 while (1)
 {
     pattern()
+    CheckStartTimers()
     align()
     checkbag()
     checkifhavetostop()

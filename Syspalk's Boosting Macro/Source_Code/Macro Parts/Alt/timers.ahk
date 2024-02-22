@@ -1,8 +1,22 @@
-StartTimers()
+CheckStartTimers()
 {
-    StartTimer(1)
-    StartTimer(2)
-    StartTimer(3)
+    if (A_TickCount - macrostarttime >= offset1*1000 && timer1started = false)
+    {
+        global timer1started := true
+        StartTimer(1)
+    }
+
+    if (A_TickCount - macrostarttime >= offset2*1000 && timer2started = false)
+    {
+        global timer2started := true
+        StartTimer(2)
+    }
+
+    if (A_TickCount - macrostarttime >= offset3*1000 && timer3started = false)
+    {
+        global timer3started := true
+        StartTimer(3)
+    }
 }
 
 StartTimer(which)

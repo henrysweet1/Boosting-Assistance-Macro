@@ -8,6 +8,7 @@ global toggle1, toggle2, toggle3
 global timer1, timer2, timer3
 global key1, key2, key3
 global offset1, offset2, offset3
+global timer1started := false, timer2started := false, timer3started := false
 global allowcommands
 
 global gumdropkey
@@ -22,6 +23,7 @@ global filepath := "Source_Code\Macro Parts\Alt\data\data.ini"
 global loadedcommandgui := false
 global cloudtimer := 1
 global useitems := true
+global macrostarttime
 
 ReadData()
 {
