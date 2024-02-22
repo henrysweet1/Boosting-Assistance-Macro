@@ -25,7 +25,7 @@ microinfo()
 materialinfo()
 {
     FileRead, text,%infopath%/materialinfo.txt
-    popup(400,200,12,"material info",text)
+    popup(400,420,12,"material info",text)
 }
 
 hotkeyinfo()

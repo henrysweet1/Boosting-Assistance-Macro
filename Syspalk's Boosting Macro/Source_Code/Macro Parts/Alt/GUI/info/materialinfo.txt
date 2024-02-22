@@ -2,6 +2,8 @@ Here you have 3 slots to manage your hotbar.
 
 The checkboxes act as a switch to enable or disable a certain slot.
 
-in the time box you input (in ms) how often you want this specific slot in your hotbar to be used.
+In the time box you input (in ms) how often you want this specific slot in your hotbar to be used.
 
-You also have to set a hotkey for each hotbar slot.
+In the hotkey slot you enter the hotkey you want the macro to press, such as 2 for example gumdrops in your hotbar.
+
+In the offset box you type how much you want to offset the usage of this certain material, for exame: if you have want to use a cloud vial and it has the offset of 0 it will use it the moment you start the macro and then start the timer, if you have it on 10 minutes it will start using the cloud vials 10 minutes after having started the macro.
