@@ -1,21 +1,28 @@
 CheckStartTimers()
 {
-    if (A_TickCount - macrostarttime >= offset1*1000 && timer1started = false)
+    ReadGui()
+    if (A_TickCount - macrostarttime >= offset1*1000 && timer1started = false && toggle1 = true)
     {
-        global timer1started := true
+        tooltip,started1
+        timer1started := true
         StartTimer(1)
+        useitem1()
     }
 
-    if (A_TickCount - macrostarttime >= offset2*1000 && timer2started = false)
+    if (A_TickCount - macrostarttime >= offset2*1000 && timer2started = false && toggle2 = true)
     {
-        global timer2started := true
+        tooltip,started2
+        timer2started := true
         StartTimer(2)
+        useitem2()
     }
 
-    if (A_TickCount - macrostarttime >= offset3*1000 && timer3started = false)
+    if (A_TickCount - macrostarttime >= offset3*1000 && timer3started = false && toggle3 = true)
     {
-        global timer3started := true
+        tooltip,started3
+        timer3started := true
         StartTimer(3)
+        useitem3()
     }
 }
 

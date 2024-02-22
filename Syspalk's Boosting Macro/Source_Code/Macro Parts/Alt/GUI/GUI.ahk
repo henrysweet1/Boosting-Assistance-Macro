@@ -26,14 +26,14 @@ loop 3{
 	offset := offset%A_Index%
 	if (A_Index = 1)
 	{
-		Gui, Add, Checkbox, x50 yp+40 cred %toggle% vtoggle%A_Index%,
+		Gui, Add, Checkbox, x50 yp+40 ctransparent %toggle% vtoggle%A_Index%,   
 		Gui, Add,Edit,number xp+40 yp-3 w100 h20 vtimer%A_Index% ,%timer%
 		Gui, Add,Edit,limit1 xp+120 yp w20 h20 vkey%A_Index% ,%key%
 		Gui, Add,Edit,number xp+40 yp-3 w60 h20 voffset%A_Index% ,%offset%
 	}
 	else
 	{
-		Gui, Add, Checkbox, x50 yp+34 cred %toggle% vtoggle%A_Index%,
+		Gui, Add, Checkbox, x50 yp+34 ctransparent %toggle% vtoggle%A_Index%,   
 		Gui, Add,Edit,number xp+40 yp-3 w100 h20 vtimer%A_Index% ,%timer%
 		Gui, Add,Edit,limit1 xp+120 yp w20 h20 vkey%A_Index% ,%key%
 		Gui, Add,Edit,number xp+40 yp w60 h20 voffset%A_Index% ,%offset%
