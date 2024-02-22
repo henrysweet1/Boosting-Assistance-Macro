@@ -18,25 +18,28 @@ Gui,Add,Text, xp yp+25 cwhite,Micro hotkey:
 Gui,Add,Edit,limit1 xp+100 yp w20 h20 vmicrokey,%microkey%
 Gui,Add,Checkbox,yp+30 x20 cwhite %allowcommands% vallowcommands,Allow macro to be controlled remotely
 
-Gui,Add,Groupbox,x25 yp+30 w300 h130 cwhite,Materials
+Gui,Add,Groupbox,x25 yp+30 w300 h135 cwhite,Materials
 loop 3{
 	toggle := toggle%A_Index%
 	timer := timer%A_Index%
 	key := key%A_Index%
+	offset := offset%A_Index%
 	if (A_Index = 1)
 	{
 		Gui, Add, Checkbox, x50 yp+40 cred %toggle% vtoggle%A_Index%,
 		Gui, Add,Edit,number xp+40 yp-3 w100 h20 vtimer%A_Index% ,%timer%
 		Gui, Add,Edit,limit1 xp+120 yp w20 h20 vkey%A_Index% ,%key%
+		Gui, Add,Edit,number xp+40 yp-3 w60 h20 voffset%A_Index% ,%offset%
 	}
 	else
 	{
 		Gui, Add, Checkbox, x50 yp+34 cred %toggle% vtoggle%A_Index%,
 		Gui, Add,Edit,number xp+40 yp-3 w100 h20 vtimer%A_Index% ,%timer%
 		Gui, Add,Edit,limit1 xp+120 yp w20 h20 vkey%A_Index% ,%key%
+		Gui, Add,Edit,number xp+40 yp w60 h20 voffset%A_Index% ,%offset%
 	}
 }
-Gui,Add,Text,yp-80 x30 cblue,Toggle    Delays (ms)    Hotkeys
+Gui,Add,Text,yp-80 x30 cblue,Toggle    Delays (ms)    Hotkey   Offset(S)
 Gui,Add,Button,x205 y130,Command mats
 
 Gui,Font, s11 Underline
@@ -47,7 +50,7 @@ Gui,Add,Text,y395 x255 c53ede5 gpausee,PAUSE: F3
 Gui,Font, s11 norm bold
 Gui,Add,Text, x170 y135 w10 h17 c%infocol% galigninfo,?
 Gui,Add,Text, x290 y170 w10 h17 c%infocol% gmicroinfo,?
-Gui,Add,Text, x310 y355 w10 h17 c%infocol% gmaterialinfo,?
+Gui,Add,Text, x310 y365 w10 h17 c%infocol% gmaterialinfo,?
 Gui,Add,Text, x315 y223 w10 h17 c%infocol% gremoteinfo,?
 
 Gui,Show, w350 h420,Syspalk's Boost macro %version%

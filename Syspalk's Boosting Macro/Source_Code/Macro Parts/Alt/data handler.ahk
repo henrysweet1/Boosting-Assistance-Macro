@@ -7,6 +7,7 @@ global microkey
 global toggle1, toggle2, toggle3
 global timer1, timer2, timer3
 global key1, key2, key3
+global offset1, offset2, offset3
 global allowcommands
 
 global gumdropkey
@@ -39,6 +40,9 @@ ReadData()
     IniRead,key1,%filepath%,regular,key1
     IniRead,key2,%filepath%,regular,key2
     IniRead,key3,%filepath%,regular,key3
+    IniRead,offset1,%filepath%,regular,offset1
+    IniRead,offset2,%filepath%,regular,offset2
+    IniRead,offset3,%filepath%,regular,offset3
     IniRead,allowcommands,%filepath%,regular,allowcommands
 
     IniRead,gumdropkey,%filepath%,command,gumdropkey
@@ -93,6 +97,9 @@ ReadGui()
     GuiControlGet,key1,,key1
     GuiControlGet,key2,,key2
     GuiControlGet,key3,,key3
+    GuiControlGet,offset1,,offset1
+    GuiControlGet,offset2,,offset2
+    GuiControlGet,offset3,,offset3
     GuiControlGet,allowcommands,,allowcommands
 }
 
@@ -135,5 +142,8 @@ SaveData()
     IniWrite,%key1%,%filepath%,regular,key1
     IniWrite,%key2%,%filepath%,regular,key2
     IniWrite,%key3%,%filepath%,regular,key3
+    IniWrite,%offset1%,%filepath%,regular,offset1
+    IniWrite,%offset2%,%filepath%,regular,offset2
+    IniWrite,%offset3%,%filepath%,regular,offset3
     IniWrite,%allowcommands%,%filepath%,regular,allowcommands
 }
