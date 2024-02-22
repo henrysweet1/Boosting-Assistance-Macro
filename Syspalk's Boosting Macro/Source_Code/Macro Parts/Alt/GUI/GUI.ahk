@@ -23,12 +23,20 @@ loop 3{
 	toggle := toggle%A_Index%
 	timer := timer%A_Index%
 	key := key%A_Index%
-
-	Gui, Add, Checkbox, x35 yp+34 cred %toggle% vtoggle%A_Index%,Hotbar slot %A_Index%
-	Gui, Add,Edit,number xp+120 yp-3 w100 h20 vtimer%A_Index% ,%timer%
-	Gui, Add,Edit,limit1 xp+120 yp w20 h20 vkey%A_Index% ,%key%
+	if (A_Index = 1)
+	{
+		Gui, Add, Checkbox, x50 yp+40 cred %toggle% vtoggle%A_Index%,
+		Gui, Add,Edit,number xp+40 yp-3 w100 h20 vtimer%A_Index% ,%timer%
+		Gui, Add,Edit,limit1 xp+120 yp w20 h20 vkey%A_Index% ,%key%
+	}
+	else
+	{
+		Gui, Add, Checkbox, x50 yp+34 cred %toggle% vtoggle%A_Index%,
+		Gui, Add,Edit,number xp+40 yp-3 w100 h20 vtimer%A_Index% ,%timer%
+		Gui, Add,Edit,limit1 xp+120 yp w20 h20 vkey%A_Index% ,%key%
+	}
 }
-Gui,Add,Text,yp-82 xp-115 cblue,Delays (ms)    Hotkeys
+Gui,Add,Text,yp-80 x30 cblue,Toggle    Delays (ms)    Hotkeys
 Gui,Add,Button,x205 y130,Command mats
 
 Gui,Font, s11 Underline
